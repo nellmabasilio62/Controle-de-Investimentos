@@ -38,7 +38,7 @@
 
   function roiDe(it) {
 
-    if (it.tipo === 'pasivo') return null;
+    if (it.tipo === 'passivo') return null;
 
     if (numero(it.atual) !== null && it.investido > 0) {
       return (it.atual - it.investido) / it.investido * 100;
