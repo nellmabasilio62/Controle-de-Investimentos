@@ -323,6 +323,8 @@ td.nome small { display: block; color: var(--tinta-2); }
   border-top: 1px solid var(--linha);
 }
 
+.titulo-impressao { display: none; }
+
 /* ---------- Formulário ---------- */
 dialog {
   border: none;
@@ -368,4 +370,35 @@ form h2 { margin-bottom: 14px; font-size: 1.15rem; }
   .pagina { padding: 0 14px; }
   .linha { grid-template-columns: 1fr; }
   #pesquisa { width: 100%; min-width: 0; }
+}
+
+@media print {
+  body { background: #fff; }
+  .topo,
+  .resumo,
+  .painel[aria-label="Corretoras"],
+  .painel-topo .btn,
+  .filtros,
+  th:last-child,
+  td:last-child {
+    display: none !important;
+  }
+
+  .pagina {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .colunas { display: block; margin: 0; }
+  .painel { border: 0; padding: 0; }
+  .tabela-caixa { overflow: visible; }
+  table { width: 100%; font-size: 10pt; }
+  th, td { white-space: normal; }
+  .titulo-impressao {
+    display: block;
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 }

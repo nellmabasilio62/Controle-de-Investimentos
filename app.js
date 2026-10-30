@@ -285,12 +285,14 @@
   });
 
   $('btnExportar').addEventListener('click', function () {
-    var blob = new Blob([JSON.stringify(estado, null, 2)], { type: 'application/json' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'investimentos.json';
-    a.click();
-    URL.revokeObjectURL(a.href);
+    var nomesFiltro = {
+      todos: 'Todos os registos',
+      ativo: 'Activos',
+      deposito: 'Depósitos',
+      passivo: 'Passivos'
+    };
+    $('tituloImpressao').textContent = 'Relatório de investimentos — ' + nomesFiltro[filtro];
+    window.print();
   });
 
   $('btnExemplo').addEventListener('click', function () {
