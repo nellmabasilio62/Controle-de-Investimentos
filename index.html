@@ -61,7 +61,10 @@
       <section class="painel" aria-label="Registos">
         <div class="painel-topo">
           <h2>Registos</h2>
-          <button class="btn btn-principal" id="btnNovo" type="button">Adicionar registo</button>
+          <div class="painel-acoes">
+            <button class="btn btn-principal" id="btnNovo" type="button">Adicionar registo</button>
+            <button class="teste-botão" id="btnLimparRegistos" type="button">Deletar Registos</button>
+          </div>
         </div>
         <p id="tituloImpressao" class="titulo-impressao"></p>
 
@@ -135,7 +138,7 @@
 
       <div class="campo">
         <label for="corretora" id="rotuloCorretora">Corretora</label>
-        <input id="corretora" type="text" list="sugestoes" placeholder="Ex.: XTB, eToro, banco,EDACO">
+        <input id="corretora" type="text" list="sugestoes" placeholder="Ex.: XTB, eToro, banco">
         <datalist id="sugestoes"></datalist>
       </div>
 
