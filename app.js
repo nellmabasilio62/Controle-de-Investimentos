@@ -248,6 +248,13 @@
 
   /* ---------- Eventos ---------- */
   $('btnNovo').addEventListener('click', function () { abrirForm(null); });
+  document.getElementById('btnLimparRegistos').addEventListener('click', function () {
+    if (!estado.itens.length) return;
+    if (!confirm('Tem a certeza de que pretende apagar todos os registos? Esta acção não pode ser desfeita.')) return;
+    estado.itens = [];
+    guardar();
+    desenhar();
+  });
   $('btnCancelar').addEventListener('click', function () { $('dialogo').close(); });
   $('formulario').addEventListener('submit', guardarForm);
   $('tipo').addEventListener('change', ajustarCamposPorTipo);

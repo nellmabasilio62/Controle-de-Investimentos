@@ -160,9 +160,16 @@ h1, h2, p { margin: 0; }
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 14px;
+  /*border: 1px solid white;*/
 }
 
 .painel-topo h2 { font-size: 1.05rem; }
+
+.painel-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 /* ---------- Botões ---------- */
 .btn {
@@ -173,6 +180,7 @@ h1, h2, p { margin: 0; }
   padding: 8px 14px;
   cursor: pointer;
   border: 1px solid transparent;
+  margin-right: 0;
 }
 
 .btn-principal { background: var(--esmeralda); color: #fff; }
@@ -402,3 +410,16 @@ form h2 { margin-bottom: 14px; font-size: 1.15rem; }
     font-weight: 600;
   }
 }
+.teste-botão{
+  display: flex;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  
+}
+.teste-botão{background:  var(--esmeralda); color: #fff; }
+.teste-botão:hover { background: #0E6B4D; }
